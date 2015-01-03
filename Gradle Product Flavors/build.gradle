@@ -1,0 +1,23 @@
+buildscript {
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath 'com.android.tools.build:gradle:0.13.3'
+	}
+}
+
+apply plugin: 'com.android.application'
+
+android {
+	compileSdkVersion 21
+	buildToolsVersion "21.0.2"
+	productFlavors {
+		playstore {
+			packageName='de.goddchen.android.gradle.productflavors.playstore'
+		}
+		amazonappstore {
+			packageName='de.goddchen.android.gradle.productflavors.amazonappstore'
+		}
+	}
+}

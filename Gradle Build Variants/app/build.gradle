@@ -1,0 +1,54 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        applicationId "cc.bb.aa.gradle_build_variants"
+        minSdkVersion 10
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file('keystore')
+            storePassword 'helloworld'
+            keyAlias 'Android Release Key'
+            keyPassword 'helloworld'
+        }
+    }
+
+    buildTypes {
+        release {
+            applicationIdSuffix '.release'
+            signingConfig signingConfigs.release
+            zipAlignEnabled false
+        }
+        debug {
+            applicationIdSuffix '.debug'
+            zipAlignEnabled false
+        }
+        buildtypesnochange {
+            signingConfig signingConfigs.release
+            zipAlignEnabled false
+        }
+    }
+
+    productFlavors {
+        playstore {
+            applicationId 'cc.bb.aa.gradle_build_variants.playstore'
+        }
+        amazonstore {
+            applicationId 'cc.bb.aa.gradle_build_variants.amazonstore'
+        }
+        productflavorsnochange {}
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:21.0.3'
+}
