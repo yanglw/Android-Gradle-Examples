@@ -40,10 +40,10 @@ debug {
 除了 `applicationIdSuffix` 之外，在 `buildTypes` 中还可以使用到下面元素：
 
 Property Name|debug|release|说明
---|--|--|--
+---|---|---|---
 debuggable|true|false|标记是否为 debug 类型，影响 `BuildConfig` 类中的 `DEBUG`常量的值
 jniDebugBuild|false|false|
-applicationIdSuffix|null|null| APK 包名追加内容
+applicationIdSuffix|null|null| APK 包名追加内容|
 versionNameSuffix|null|null|版本名称追加内容
 signingConfig|android.signingConfigs.debug|null|签名信息
 zipAlign|false|true|压缩对齐
