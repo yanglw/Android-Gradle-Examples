@@ -1,7 +1,7 @@
 # Android-Gradle-Examples
 
 > 本系列内容借鉴于 Github 上 `Goddchen` 的 [Android-Gradle-Examples](https://github.com/Goddchen/Android-Gradle-Examples) 。本人借鉴该项目对 `Gradle Plugin` 的知识分类，进行中文讲解以及内容补充。
-> 
+>
 > 关于 2013年 Google I/O 中关于 `Gradle` 的 PPT ，可以[点此](Gradle.pptx)查看，里面讲了一些 `Gradle` 的用法以及小技巧。
 
 > 更多关于 `Gradle` 的内容请[点此](https://www.gradle.org/)。`Gradle` 官方教程请[点此](https://www.gradle.org/docs/current/userguide/userguide.html)。
@@ -27,3 +27,5 @@
     讲解 `Gradle Plugin` 中 `buildTypes` 、 `productFlavors` 元素。
 6. Gradle Unit Test  
     讲解 `Gradle` 对 `Unit` 的支持，需要 Android Studio 1.1 版本。
+7. Gradle Flavor Dimensions
+    讲解 `Gradle Plugin` 中 `flavorDimensions` 元素 。

@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        applicationId "aa.bb.cc"
+        minSdkVersion 10
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file('keystore')
+            storePassword 'helloworld'
+            keyAlias 'Android Release Key'
+            keyPassword 'helloworld'
+        }
+    }
+
+    buildTypes {
+        release {
+            applicationIdSuffix '.release'
+            signingConfig signingConfigs.release
+            zipAlignEnabled false
+        }
+        debug {
+            applicationIdSuffix '.debug'
+            zipAlignEnabled false
+        }
+    }
+
+    flavorDimensions 'price', 'store'
+
+    productFlavors {
+
+        google {
+            flavorDimension 'store'
+        }
+
+        amazon {
+            flavorDimension 'store'
+        }
+
+        free {
+            flavorDimension 'price'
+
+            applicationId 'aa.bb.cc.free'
+        }
+
+        paid {
+            flavorDimension 'price'
+            applicationId 'aa.bb.cc.paid'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:21.0.3'
+}

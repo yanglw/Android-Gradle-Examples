@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Debug</string>
+    <string name="hello_world">hello debug</string>
+
+</resources>
