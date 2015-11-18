@@ -27,5 +27,5 @@
     讲解 `Gradle Plugin` 中 `buildTypes` 、 `productFlavors` 元素。
 6. Gradle Unit Test  
     讲解 `Gradle` 对 `Unit` 的支持，需要 Android Studio 1.1 版本。
-7. Gradle Flavor Dimensions
+7. Gradle Flavor Dimensions  
     讲解 `Gradle Plugin` 中 `flavorDimensions` 元素 。
